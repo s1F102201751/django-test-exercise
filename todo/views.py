@@ -14,8 +14,6 @@ def index(request):
         tasks = Task.objects.order_by('due_at')
     else:
         tasks = Task.objects.order_by('-posted_at')
-    
-    tasks = Task.objects.all()
 
     context = {
         'tasks': tasks
